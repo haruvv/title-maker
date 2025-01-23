@@ -21,7 +21,7 @@ jobs:
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: "8.1"
+          php-version: "8.4"
 
       - name: Install Composer dependencies
         working-directory: av-title-maker-backend
@@ -31,7 +31,7 @@ jobs:
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: your-app-name
-          heroku_email: your-email@example.com
+          heroku_app_name: title-maker
+          heroku_email: haruki.ito0044@gmail.com
           usedocker: false
           appdir: av-title-maker-backend
